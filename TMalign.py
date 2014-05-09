@@ -30,7 +30,7 @@ class TMalign:
         self.vector,self.matrix = self.getRotationMatrix(matrixlines)
 
     def writePDBtmp(self,pdbobj):
-        tmp = tempfile.NamedTemporaryFile()
+        tmp = tempfile.NamedTemporaryFile(suffix=".pdb")
         writePDB(tmp.name,pdbobj)
         return tmp
 
